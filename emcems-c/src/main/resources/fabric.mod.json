@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "emcems-c",
+	"version": "${version}",
+	"name": "EMCEMS-C",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/emcems-c/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.eabbott.emcemsc.EMCEMSC"
+		],
+		"client": [
+			"net.eabbott.emcemsc.client.EMCEMSCClient"
+		],
+		"fabric-datagen": [
+			"net.eabbott.emcemsc.client.EMCEMSCDataGenerator"
+		]
+	},
+	"mixins": [
+		"emcems-c.mixins.json",
+		{
+			"config": "emcems-c.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
